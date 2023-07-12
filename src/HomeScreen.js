@@ -7,6 +7,6 @@ function HomeScreen() {
         <p>사회복지를 위한 서비스</p>
     </div>
     );
-}//
+}
 
 export default HomeScreen;
