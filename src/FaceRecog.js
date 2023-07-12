@@ -8,4 +8,4 @@ function FaceRecog() {
     );
 }
 
-export default FaceRecog;
+export default FaceRecog;//
