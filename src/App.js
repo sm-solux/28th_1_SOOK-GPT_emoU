@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, {useState} from "react";
+import ChatBot from "./ChatBot";
+import HomeScreen from "./HomeScreen";
+import FaceRecog from "./FaceRecog";
+import Map from "./Map";
+
 
 function App() {
+  const [toDos, setToDos] = useState([]);
+  const addToDo = (todo) => {
+    setToDos((prevToDos) => [todo, ...prevToDos]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>Emo:U</h1>
+        <hr />
+        <nav>
+          <ul style={{ display: "flex", listStyle: "none" }}>
+            <li style={{ margin: "0 10px" }}>
+              <Link to="/">홈</Link>
+            </li>
+            <li style={{ margin: "0 10px" }}>
+              <Link to="/ChatBot">챗봇</Link>
+            </li>
+            <li style={{ margin: "0 10px" }}>
+              <Link to="/Map">지도</Link>
+            </li>
+            <li style={{ margin: "0 10px" }}>
+              <Link to="/Face-recognition">표정 인식</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route exact path="/">
+            <HomeScreen />
+          </Route>
+          <Route path="/ChatBot">
+            <ChatBot addToDo={addToDo}/>
+          </Route>
+          <Route path="/Map">
+            <Map addToDo={addToDo}/>
+          </Route>
+          <Route path="/Face-recognition">
+            <FaceRecog addToDo={addToDo}/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
