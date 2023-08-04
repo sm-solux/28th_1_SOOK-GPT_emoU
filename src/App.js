@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, {useState} from "react";
-import ChatBot from "./ChatBot";
+import ChatBot from "./ChatBotpage";
 import HomeScreen from "./HomeScreen";
 import FaceRecog from "./FaceRecog";
 import Map from "./Map";
+import Kakao from "./Kakaomap";
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
             <ChatBot addToDo={addToDo}/>
           </Route>
           <Route path="/Map">
-            <Map addToDo={addToDo}/>
+            <Kakao addToDo={addToDo}/>
           </Route>
           <Route path="/Face-recognition">
             <FaceRecog addToDo={addToDo}/>
