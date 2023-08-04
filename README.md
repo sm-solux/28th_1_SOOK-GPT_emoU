@@ -2,8 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##호스팅 페이지
+## 호스팅 페이지
 https://sook-gpt.github.io/emotion_/
+
 챗봇은 잘 보이는데 지도는 용량이 커서 그런가 에러만 보이고 뜨지를 않네용. 이거 왜이런지 아시는분 있나요??
 
 ## Available Scripts
@@ -19,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-###각자 파일 위치
+### 각자 파일 위치
 src 폴더 내에 있음. 
 
 ### `npm test`
