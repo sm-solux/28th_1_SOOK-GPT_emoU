@@ -3,7 +3,6 @@ import React, {useState} from "react";
 import ChatBot from "./ChatBotpage";
 import HomeScreen from "./HomeScreen";
 import FaceRecog from "./FaceRecog";
-import Map from "./Map";
 import Kakao from "./Kakaomap";
 
 
